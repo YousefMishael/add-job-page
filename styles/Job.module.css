@@ -1,0 +1,239 @@
+.formWrapper {
+  min-height: 80vh;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  border: 1.5px solid var(--dialog-border-color);
+  background-color: #fff;
+  padding: 0.5em;
+  /* height: 9rem; */
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5em;
+  box-shadow: 0px 0 1px 1px hsla(209, 18%, 67%, 0.2);
+}
+
+.imageWrapper {
+  box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  margin-inline-end: 1em;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsWrapper {
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+}
+
+.jobTitle {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.headDetails {
+  font-weight: 500;
+  font-size: small;
+  margin-top: 0.5em;
+}
+
+.description {
+  max-width: 62%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: smaller;
+  color: grey;
+}
+
+.actionWrapper {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  display: flex;
+  gap: 1em;
+}
+
+.actionWrapper span {
+  cursor: pointer;
+}
+
+.seeMore {
+  color: #8cdaff;
+}
+
+.delete {
+  color: #b52e3f;
+}
+
+.dialogContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+}
+
+.dialogItem {
+  padding: 0.5em;
+  outline: none;
+  height: 2.5rem;
+  border: 1px solid var(--dialog-border-color);
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.dialogContainer select {
+  opacity: 0;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.dialogSelect {
+  border: 1px solid var(--dialog-border-color);
+  width: 100%;
+  height: 2.5rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dialogSelect::after {
+  content: "";
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 0.7rem solid var(--dialog-border-color);
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+}
+
+.dialogSelect::before {
+  content: "";
+  position: absolute;
+  right: calc(0.5em + 0.1rem);
+  top: 51%;
+  -webkit-transform: translateY(-51%);
+  -moz-transform: translateY(-51%);
+  -ms-transform: translateY(-51%);
+  -o-transform: translateY(-51%);
+  transform: translateY(-51%);
+  width: 0;
+  height: 0;
+  border-top: 0.6rem solid #fff;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  z-index: 1;
+}
+
+.dialogContainer textarea,
+.descWrapper {
+  width: 100%;
+  height: auto;
+}
+
+.placeHolder {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0.5em;
+  font-size: 0.9rem;
+  color: #8c8987;
+}
+
+.placeHolder.active {
+  color: inherit;
+}
+
+.dialogDetContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.dialogImgWrapper {
+  width: 10rem;
+  height: 10rem;
+  box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dialogImgWrapper img {
+  width: 100%;
+}
+
+.dialogName {
+  font-weight: 600;
+  display: block;
+}
+
+.dialogSector {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.dialogDescWrapper {
+  width: 100%;
+  text-align: center;
+  background-color: var(--home-bg-color);
+}
+
+.dialogDesc {
+  color: grey;
+}
+
+/*Tablets*/
+@media (min-width: 768px) {
+  .formWrapper {
+    min-height: 56vh;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+/*Mini laptops*/
+@media (min-width: 1200px) {
+  .dialogContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    /* min-height: 60vh; */
+    justify-content: space-between;
+  }
+
+  .selectWrapper,
+  .dialogContainer input {
+    width: 49%;
+    display: inline-block;
+  }
+}

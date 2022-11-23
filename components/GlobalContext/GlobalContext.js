@@ -4,8 +4,8 @@ import Dialog from "../Dialog/Dialog";
 
 export default function GlobalContext({ children }) {
   const [dialogContent, setDialogContent] = useState({
-    title: "",
-    body: "",
+    title: "Welcome Message",
+    body: "Welcome to our website...",
     actions: "",
   });
   const [showDialog, setShowDialog] = useState(false);
